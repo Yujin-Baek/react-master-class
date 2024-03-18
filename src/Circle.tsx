@@ -1,0 +1,22 @@
+import styled from "styled-components";
+
+const Cotainer = styled.div<ContainerProps>`
+  width: 200px;
+  height: 200px;
+  background-color: ${(props) => props.bgColor};
+  border-radius: 100px;
+`;
+
+interface ContainerProps {
+  bgColor: string;
+}
+
+interface CircleProps {
+  bgColor: string;
+}
+
+function Circle({ bgColor }: CircleProps) {
+  return <Cotainer bgColor={bgColor} />;
+}
+
+export default Circle;
